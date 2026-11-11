@@ -1,0 +1,83 @@
+:root {
+    --tinta: #1b2340;
+    --tinta-lembut: #2c3768;
+    --kertas: #f5f6fa;
+    --daun: #0f7b6c;
+    --daun-gelap: #0b5f53;
+    --stabilo: #f5b83d;
+    --garis: #dde1ec;
+    --teks: #232a45;
+    --teks-redup: #646c86;
+    --radius: 10px;
+}
+
+body {
+    font-family: "Source Sans 3", system-ui, sans-serif;
+    background: var(--kertas);
+    color: var(--teks);
+    line-height: 1.55;
+}
+h1, h2, h3, h4, .sw-brand { font-family: "Bricolage Grotesque", system-ui, sans-serif; letter-spacing: -0.01em; }
+
+/* Navigasi */
+.sw-nav { background: var(--tinta); padding: .75rem 0; }
+.sw-brand { color: #fff !important; font-weight: 700; font-size: 1.2rem; }
+.sw-brand .bi { color: var(--stabilo); }
+.sw-user { color: #c9cfe6; font-size: .95rem; }
+
+/* Tombol */
+.btn-sw { background: var(--daun); border-color: var(--daun); color: #fff; font-weight: 600; }
+.btn-sw:hover, .btn-sw:focus { background: var(--daun-gelap); border-color: var(--daun-gelap); color: #fff; }
+:focus-visible { outline: 3px solid var(--stabilo); outline-offset: 2px; }
+
+/* Halaman login */
+.sw-login { min-height: 100vh; }
+.sw-login-visual {
+    background: var(--tinta);
+    color: #fff;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 3rem;
+}
+.sw-login-visual h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; max-width: 14ch; }
+.sw-login-visual p { color: #c9cfe6; max-width: 38ch; }
+.sw-rak { display: flex; align-items: flex-end; gap: 6px; height: 190px; border-bottom: 6px solid var(--stabilo); padding: 0 4px; }
+.sw-rak span { display: block; width: 26px; border-radius: 3px 3px 0 0; }
+.sw-rak span:nth-child(1) { height: 70%;  background: #5b6bd0; }
+.sw-rak span:nth-child(2) { height: 92%;  background: var(--daun); }
+.sw-rak span:nth-child(3) { height: 58%;  background: var(--stabilo); }
+.sw-rak span:nth-child(4) { height: 80%;  background: #e4e8f7; }
+.sw-rak span:nth-child(5) { height: 100%; background: #3c4a8f; }
+.sw-rak span:nth-child(6) { height: 66%;  background: var(--daun); width: 34px; }
+.sw-rak span:nth-child(7) { height: 86%;  background: #7d8be0; }
+.sw-rak span:nth-child(8) { height: 74%;  background: #e4e8f7; width: 20px; }
+.sw-login-form { display: flex; align-items: center; justify-content: center; padding: 2rem; background: #fff; }
+.sw-login-form .inner { width: 100%; max-width: 380px; }
+
+/* Kartu & tabel */
+.sw-panel { background: #fff; border: 1px solid var(--garis); border-radius: var(--radius); }
+.sw-stat { padding: 1.1rem 1.25rem; }
+.sw-stat .angka { font-family: "Bricolage Grotesque", sans-serif; font-size: 2rem; font-weight: 700; line-height: 1; }
+.sw-stat .label { color: var(--teks-redup); font-size: .92rem; }
+.sw-table th { font-weight: 600; color: var(--teks-redup); font-size: .9rem; border-bottom-color: var(--garis); white-space: nowrap; }
+.sw-table td { vertical-align: middle; }
+.sw-thumb { width: 48px; height: 66px; object-fit: cover; border-radius: 4px; border: 1px solid var(--garis); background: #eef0f7; }
+.sw-thumb-kosong { width: 48px; height: 66px; display: grid; place-items: center; border-radius: 4px; background: #eef0f7; color: #9aa1bb; border: 1px dashed var(--garis); }
+
+.badge-tersedia { background: #dcf3ee; color: #0b5f53; }
+.badge-dipinjam { background: #fdecc8; color: #7a5200; }
+.sw-badge { display: inline-block; padding: .25rem .6rem; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+
+.sw-cover-preview {
+    width: 100%; max-width: 220px; aspect-ratio: 3 / 4;
+    border: 1px dashed #b8bfd6; border-radius: var(--radius);
+    display: grid; place-items: center; overflow: hidden; background: #fafbfe;
+}
+.sw-cover-preview img { width: 100%; height: 100%; object-fit: cover; }
+
+.form-control:focus, .form-select:focus { border-color: var(--daun); box-shadow: 0 0 0 .2rem rgba(15, 123, 108, .18); }
+
+@media (max-width: 991.98px) {
+    .sw-login-visual { padding: 2rem; gap: 2rem; }
+    .sw-rak { height: 110px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

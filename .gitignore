@@ -1,0 +1,6 @@
+# File sampul yang diunggah saat pengembangan tidak ikut di-commit
+uploads/*
+!uploads/.gitkeep
+!uploads/.htaccess
+.DS_Store
+Thumbs.db
